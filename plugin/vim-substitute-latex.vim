@@ -16,7 +16,7 @@ for line in s:lines
   let lines_split = split(line, ' ')
   let latex = lines_split[0]
   let symbol = lines_split[-1]
-  let s:dict[latex] = symbol
+  let s:dict[latex."(".symbol.")"] = symbol
 endfor
 
 function! s:ReplaceLaTeXWithSymbols()
